@@ -1,6 +1,6 @@
 # home-manager template
 
-This provides a template for using
+This provides a quick-start template for using
 [home-manager](https://github.com/rycee/home-manager) in a more
 reproducible way. You don't have to install home-manager, and it uses
 pinning.
