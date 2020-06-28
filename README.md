@@ -1,8 +1,9 @@
 # home-manager template
 
 This provides a template for using
-[home-manager](https://github.com/rycee/home-manager) without
-installing it.
+[home-manager](https://github.com/rycee/home-manager) in a more
+reproducible way. You don't have to install home-manager, and it uses
+pinning.
 
 # Why?
 
