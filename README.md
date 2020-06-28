@@ -17,7 +17,7 @@ Also, since this uses niv to pin nixpkgs and home-manager, you do not
 need nixpkgs on your path and can be sure the build will be the same
 on any computer.
 
-# Dependencies
+# Prerequisites
 
 You must have [nix](https://nixos.org) installed on your machine.
 
