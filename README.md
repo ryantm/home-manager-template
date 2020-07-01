@@ -27,8 +27,9 @@ curl -L https://nixos.org/nix/install | sh
 
 # Tutorial
 
-1. Fork this repository and clone it to your computer
-2. Update dependencies (home-manager and nixpkgs) to the latest version:
+1. Click the "Use this template" button on GitHub
+2. Clone your repository onto the computer you want to configure
+3. Update dependencies (home-manager and nixpkgs) to the latest version:
 
    ```sh
    ./update-dependencies.sh
@@ -40,8 +41,8 @@ curl -L https://nixos.org/nix/install | sh
    nix-shell --run "niv update"
    ```
 
-3. Edit `./home.nix` to be how you want it.
-4. Run the switch script to switch to your configuration:
+4. Edit `./home.nix` to be how you want it.
+5. Run the switch script to switch to your configuration:
 
     ```sh
     ./switch.sh
