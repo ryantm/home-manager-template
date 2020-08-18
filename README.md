@@ -19,39 +19,28 @@ on any computer.
 
 # Prerequisites
 
-You must have [nix](https://nixos.org) installed on your machine.
+You must have [nix](https://nixos.org) version 2.4 or greater
+installed on your machine, with the experimental flakes feature turned
+on.
 
-```sh
-curl -L https://nixos.org/nix/install | sh
-```
+See [this post](https://www.tweag.io/blog/2020-05-25-flakes/) for
+details about how to try out flakes.
 
 # Tutorial
 
 1. Click the "Use this template" button on GitHub
 2. Clone your repository onto the computer you want to configure
-3. Update dependencies (home-manager and nixpkgs) to the latest version:
-
-   ```sh
-   ./update-dependencies.sh
-   ```
-
-   which is just shorthand for:
-
-   ```
-   nix-shell --run "niv update"
-   ```
-
-4. Edit `./home.nix` to be how you want it.
-5. Run the switch script to switch to your configuration:
+3. Edit `./home.nix` to be how you want it.
+4. Run the switch script to switch to your configuration:
 
     ```sh
     ./switch.sh
     ```
 
-    which is just shorthand for:
+    which is shorthand for:
 
     ```
-    nix-shell --run "home-manager switch"
+    nix develop -c "home-manager switch"
     ```
 
 
