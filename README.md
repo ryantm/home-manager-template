@@ -13,9 +13,9 @@ reproducibility another step by making it so you do not need to
 install home-manager to use it, and do not need to install
 home-manager configuration files in a specific place.
 
-Also, since this uses niv to pin nixpkgs and home-manager, you do not
-need nixpkgs on your path and can be sure the build will be the same
-on any computer.
+Also, since this uses flakes to pin nixpkgs and home-manager, you do
+not need nixpkgs on your path and can be sure the build will be the
+same on any computer.
 
 # Prerequisites
 
@@ -28,22 +28,15 @@ details about how to try out flakes.
 
 # Tutorial
 
-1. Click the "Use this template" button on GitHub
-2. Clone your repository onto the computer you want to configure
-3. Edit `./home.nix` to be how you want it.
-4. Run the switch script to switch to your configuration:
-
-    ```sh
-    ./switch.sh
-    ```
-
-    which is shorthand for:
-
+1. Copy `flake.nix` into the directory with your `home.nix` file. You
+   may copy the example `home.nix` file in this repository, if you
+   don't have one already.
+2. Commit the `flake.nix` file into your git repository.
+3. Run `nix flake update` to establish a `flake.lock` file.
+4. When you want to switch home-manager configurations, run:
     ```
     nix develop -c "home-manager switch"
     ```
-
-
 
 # Caveats
 
