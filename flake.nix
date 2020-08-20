@@ -3,8 +3,6 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-
   inputs.home-manager = {
     type = "github";
     owner = "rycee";
