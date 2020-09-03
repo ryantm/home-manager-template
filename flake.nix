@@ -3,7 +3,10 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nixpkgs.url = "github:nixos/nixpkgs";
-  inputs.home-manager.url = "github:rycee/home-manager";
+  inputs.home-manager = {
+    url = "github:rycee/home-manager";
+    inputs.nixpkgs.follows = "";
+  };
 
   outputs = { self, flake-utils, nixpkgs, home-manager }:
     flake-utils.lib.eachDefaultSystem (system:
