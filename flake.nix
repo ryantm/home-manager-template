@@ -2,13 +2,7 @@
   description = "A flake for home-manager-template";
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
-
-  inputs.home-manager = {
-    type = "github";
-    owner = "rycee";
-    repo = "home-manager";
-    flake = false;
-  };
+  inputs.home-manager.url = "github:rycee/home-manager";
 
   outputs = { self, flake-utils, nixpkgs, home-manager }:
     flake-utils.lib.eachDefaultSystem (system:
