@@ -59,7 +59,7 @@ curl -L https://nixos.org/nix/install | sh
 # Caveats
 
 Since we do not install home-manager, you need to let home-manager
-manage your shell otherwise it will not be able to add its hooks to
+manage your shell, otherwise it will not be able to add its hooks to
 your profile, e.g. no shell variables will get set by home-manager.
 Please consult home-manager documentation for exact required steps.
 
