@@ -13,6 +13,9 @@ in pkgs.mkShell rec {
   buildInputs = with pkgs; [
     niv
     (import sources.home-manager {inherit pkgs;}).home-manager
+    # known undeclared runtime dependencies of home-manager
+    git
+    nix
   ];
 
   shellHook = ''
